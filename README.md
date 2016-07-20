@@ -7,7 +7,11 @@ this board would be center for controlling many device and sensor in plantation 
 following is the pin map for EPS module and Arduino board
 
 A0,A1,A2,A3,A6,Ay on arduino use for  measure I-V
+
 one NRF24l socked installed for remote low power soil humidity measurements 
+
 2 digital sensor socket break out for temperature and whether station
+
 1 digital and 1 analogue socked break out from ESP module 
+
 4 relay installed (3 control by Arduino , one by ESP)
