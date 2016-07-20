@@ -1,5 +1,5 @@
 # Smart_plantation
-this is schematic  to monitor 3 phase AC motor and its peripheral for places which used power source
+this is schematic  to monitor 3 phase AC motor and its peripheral for places which used such power source
 
 Thanks to guys from **www.openenergymonitor.org** community which is be my inspiration to start on this project .
 
