@@ -27,3 +27,5 @@ one NRF24l socked installed for remote low power soil humidity measurements
 1 digital and 1 analogue socked break out from ESP module 
 
 4 relay installed (3 control by Arduino , one by ESP)
+
+new board designed and tested successfully
