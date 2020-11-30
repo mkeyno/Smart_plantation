@@ -16,3 +16,6 @@ one NRF24l socked installed for remote low power soil humidity measurements
 1 digital and 1 analogue socked break out from ESP module 
 
 4 relay installed (3 control by AVR  , one by ESP)
+
+![Image](https://github.com/mkeyno/Smart_plantation/blob/master/back.png) 
+![Image](https://github.com/mkeyno/Smart_plantation/blob/master/front.png) 
