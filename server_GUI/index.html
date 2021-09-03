@@ -1,0 +1,1896 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Smart Plantation</title>
+<meta name="author" content="Keyno Guidance & Control">
+<style type="text/css">
+div#container
+{
+   width: 800px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #4169E1;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#banner
+{
+   background-color: #FFFFFF;
+}
+#footer
+{
+   background-color: #000000;
+   background-color: rgba(0,0,0,0.50);
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text11 div
+{
+   text-align: center;
+}
+#wb_CssMenu4
+{
+   border: 0px #0000CD solid;
+   background-color: transparent;
+}
+#wb_CssMenu4 ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_CssMenu4 li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 1px 0px 0px;
+   width: 120px;
+}
+#wb_CssMenu4 a
+{
+   display: block;
+   float: left;
+   color: #00FFFF;
+   border: 0px #D0F0EF solid;
+   background-color: #AEBCBF;
+   background: -moz-linear-gradient(top,#AEBCBF 0%,#6E7774 50%,#0A0E0A 50%,#0A0809 100%);
+   background: -webkit-linear-gradient(top,#AEBCBF 0%,#6E7774 50%,#0A0E0A 50%,#0A0809 100%);
+   background: -o-linear-gradient(top,#AEBCBF 0%,#6E7774 50%,#0A0E0A 50%,#0A0809 100%);
+   background: -ms-linear-gradient(top,#AEBCBF 0%,#6E7774 50%,#0A0E0A 50%,#0A0809 100%);
+   background: linear-gradient(top,#AEBCBF 0%,#6E7774 50%,#0A0E0A 50%,#0A0809 100%);
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   font-style: normal;
+   text-decoration: none;
+   width: 110px;
+   height: 30px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 30px;
+   text-align: center;
+}
+#wb_CssMenu4 li:hover a, #wb_CssMenu4 a:hover
+{
+   color: #FFFFFF;
+   background-color: #002840;
+   background: -moz-linear-gradient(top,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: -webkit-linear-gradient(top,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: -o-linear-gradient(top,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: -ms-linear-gradient(top,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   background: linear-gradient(top,#002840 0%,#002840 18%,#4ECAFD 50%,#002840 81%,#002840 100%);
+   border: 0px #145F74 solid;
+}
+#wb_CssMenu4 li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_CssMenu4 li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_CssMenu4 br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#wb_Tdsext3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Tdsext3 div
+{
+   text-align: center;
+}
+#current_data
+{
+   border: 0px #000000 solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#SAT
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#_link
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 50px;
+   -webkit-border-radius: 50px;
+   border-radius: 50px;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+
+#adv_layer
+{
+   background-color: #FFFFFF;
+   border: 1px #000000 solid;
+   -moz-border-radius: 20px;
+   -webkit-border-radius: 20px;
+   border-radius: 20px;
+   filter: alpha(opacity=90);
+   opacity: 0.90;
+}
+#Buttonfsdsd
+{
+   border: 0px #0000CD solid;
+   background-color: #0000FF;
+   color: #FF0000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+}
+#Buttfffffon5
+{
+   border: 0px #0000CD solid;
+   background-color: #FF0000;
+   color: #0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+}
+#STS
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Butzton4dfgh
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text12 div
+{
+   text-align: center;
+}
+#wb_Text25 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text25 div
+{
+   text-align: center;
+}
+#Butxzxczxcton1
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#OWN
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   text-align: center;
+   vertical-align: middle;
+}
+#set_sce
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text3 div
+{
+   text-align: center;
+}
+#wb_Text24 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text24 div
+{
+   text-align: center;
+}
+#Buttjfgvhon2
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#PHN
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Buttonczxvzx3
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#ts_4
+{
+   border: 1px #00FFFF solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#ts_3
+{
+   border: 1px #00FFFF solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#ts_2
+{
+   border: 1px #00FFFF solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#ts_1
+{
+   border: 1px #00FFFF solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#ts_0
+{
+   border: 1px #00FFFF solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Telbxt4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Telbxt4 div
+{
+   text-align: left;
+}
+#T5
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#T4
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#T3
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#T2
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#T1
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Button3dsfg
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text18 div
+{
+   text-align: center;
+}
+#wb_Tezzzjjzxt31 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Tezzzjjzxt31 div
+{
+   text-align: center;
+}
+
+#status_layer
+{
+   background-color: #FAF0E6;
+   border: 1px #000000 solid;
+   -moz-border-radius: 20px;
+   -webkit-border-radius: 20px;
+   border-radius: 20px;
+   filter: alpha(opacity=90);
+   opacity: 0.90;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text2 div
+{
+   text-align: center;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text5 div
+{
+   text-align: left;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text6 div
+{
+   text-align: left;
+}
+#wb_Text7 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text7 div
+{
+   text-align: left;
+}
+#wb_Text8 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text8 div
+{
+   text-align: left;
+}
+#wb_Text9 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text9 div
+{
+   text-align: left;
+}
+#0motor
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 60px;
+   -webkit-border-radius: 60px;
+   border-radius: 60px;
+   background-color: #FF0000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#water_level
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#3equp
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 60px;
+   -webkit-border-radius: 60px;
+   border-radius: 60px;
+   background-color: #FF0000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#Tbar1
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Editbox3
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #0000FF;
+   background: -moz-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -webkit-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -o-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -ms-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#pbar1
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Editbox4
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #FF0000;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Tbar2
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Editbox2
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #0000FF;
+   background: -moz-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -webkit-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -o-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -ms-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#pbar2
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Editbox6
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #FF0000;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Tbar3
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Editbox8
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #0000FF;
+   background: -moz-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -webkit-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -o-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -ms-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#pbar3
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Editbox10
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #FF0000;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Tbar4
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#Editbox12
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #0000FF;
+   background: -moz-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -webkit-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -o-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: -ms-linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   background: linear-gradient(bottom,#0000FF 0%,#FF0000 100%);
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#pbar4
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Editbox14
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #FF0000;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text14 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text14 div
+{
+   text-align: center;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text15 div
+{
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#VA_1
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #D3D3D3;
+   color :#0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#VA_0
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #D3D3D3;
+   color :#0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#VA_2
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #D3D3D3;
+   color :#0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#VA_3
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #D3D3D3;
+   color :#0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#VA_4
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #D3D3D3;
+   color :#0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#VA_5
+{
+   border: 0px #A9A9A9 solid;
+   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   border-radius: 12px;
+   background-color: #D3D3D3;
+   color :#0000FF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Text13 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text13 div
+{
+   text-align: center;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text16 div
+{
+   text-align: center;
+}
+#wb_Text17 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text17 div
+{
+   text-align: left;
+}
+#efficency
+{
+   border: 1px #C0C0C0 solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#powerfactor
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#power
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text18 div
+{
+   text-align: center;
+}
+#wb_Text19 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text19 div
+{
+   text-align: center;
+}
+#wb_Text20 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text20 div
+{
+   text-align: center;
+}
+#wb_Text21 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text21 div
+{
+   text-align: center;
+}
+#wb_Text22 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text22 div
+{
+   text-align: center;
+}
+#wb_Text23 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text23 div
+{
+   text-align: center;
+}
+#Shape1
+{
+   border-width: 0;
+}
+#Editbox18
+{
+   border: 1px #00008B solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text3 div
+{
+   text-align: center;
+}
+#wb_Text10 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text10 div
+{
+   text-align: center;
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text11 div
+{
+   text-align: center;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text12 div
+{
+   text-align: center;
+}
+#wb_Text24 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text24 div
+{
+   text-align: center;
+}
+#wb_Text25 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text25 div
+{
+   text-align: center;
+}
+#wb_Text26 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text26 div
+{
+   text-align: center;
+}
+#wb_Text27 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text27 div
+{
+   text-align: center;
+}
+#station_name
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#lastcommand
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#account
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#owner
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#licence
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#phone
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#sotware
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Text28 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text28 div
+{
+   text-align: center;
+}
+#1manu
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 60px;
+   -webkit-border-radius: 60px;
+   border-radius: 60px;
+   background-color: #FF0000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#wb_Text29 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text29 div
+{
+   text-align: center;
+}
+#2manifolds
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 60px;
+   -webkit-border-radius: 60px;
+   border-radius: 60px;
+   background-color: #FF0000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#speed
+{
+   border: 0px #A9A9A9 solid;
+   background-color: transparent;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text30 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text30 div
+{
+   text-align: center;
+}
+#Image3
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#upate_status
+{
+   border: 0px #A9A9A9 solid;
+   background-color: transparent;
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+}
+#scenario
+{
+   border: 1px #87CEEB solid;
+   background-color: transparent;
+   color :#0000CD;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Tezzzzxt31 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Tezzzzxt31 div
+{
+   text-align: center;
+}
+#Image1
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+
+
+</style>
+<link href="css.css" rel="stylesheet" type="text/css">
+<script src="Stand.js"></script>
+<script src="sm.js"></script>
+<script type="text/javascript">         
+   window.onload = function ()
+            {
+            
+            Wave('logo.png','flag',8,200);
+            Wave('logo1.png','flag2',2,400);
+             setTimeout(Request_IP,1000);
+           // all_off();
+             setTimeout( lunch_chart(), 1500);
+           // setTimeout( lunch_powerchart(), 2000);
+            show_tab("_status");
+           //  setTimeout( animatebar, 2000,1,44);
+            }
+                  
+          var tab_list=["_status","_system","_GSM","_wifi","_about"]
+           function show_tab(id) 
+           {
+         	for(i=0;i<tab_list.length;i++) 
+         	{
+         		//alert(tab_list[i])
+         		if(id==tab_list[i]) document.getElementById(tab_list[i]).style.display = 'block';
+         	    else                document.getElementById(tab_list[i]).style.display = 'none';
+         	} 
+           }
+         
+ var lines=0;
+function changeimage()
+{
+document.getElementById("Image1").style.filter = "grayscale(100%)";
+}
+function addtext()
+{
+document.getElementById("sim_tb").value +="grayscale(100%)"+"\n";
+if(lines>10){document.getElementById("sim_tb").value ="";lines=0;}
+lines++;
+}
+
+function changeimage()
+{
+document.getElementById("Image1").style.filter = "grayscale(100%)";
+}
+      
+         
+</script>
+</head>
+<body>
+   <div id="container">
+<!-- status -->
+      <div id="_status" style="position:absolute;left:52px;top:188px;width:122px;height:72px;z-index:8">
+         <div id="status_layer" style="position:absolute;text-align:left;left:8px;top:0px;width:761px;height:785px;z-index:74;" class="My_layer">
+            <input type="button" id="0motor" onclick="set_relay(this.id);return false;" name="" value="Stop" style="position:absolute;left:378px;top:333px;width:45px;height:52px;z-index:0;">
+            <input type="text" id="water_level" style="position:absolute;left:644px;top:365px;width:70px;height:18px;line-height:18px;z-index:1;" name="Editbox3" value="12" class="My_TX">
+            <input type="button" id="3equp" onclick="set_relay(this.id);return false;" name="" value="Close" style="position:absolute;left:101px;top:477px;width:46px;height:45px;z-index:2;" class="relay">
+            <input type="text" id="Tbar1" style="position:absolute;left:137px;top:271px;width:20px;height:18px;line-height:18px;z-index:3;" name="Editbox3" value="5" class="My_TX">
+            <input type="text" id="Editbox3" style="position:absolute;left:143px;top:292px;width:10px;height:78px;line-height:78px;z-index:4;" name="Editbox3" value="" readonly="" class="bar">
+            <input type="text" id="pbar1" style="position:absolute;left:143px;top:292px;width:10px;height:60px;line-height:60px;z-index:5;" name="Editbox3" value="" readonly="" class="pbar">
+            <input type="text" id="Editbox4" style="position:absolute;left:139px;top:365px;width:18px;height:19px;line-height:19px;z-index:6;" name="Editbox3" value="" readonly="" class="bulb">
+            <input type="text" id="Tbar2" style="position:absolute;left:212px;top:271px;width:20px;height:18px;line-height:18px;z-index:7;" name="Editbox3" value="5" class="My_TX">
+            <input type="text" id="Editbox2" style="position:absolute;left:218px;top:292px;width:10px;height:78px;line-height:78px;z-index:8;" name="Editbox3" value="" readonly="" class="bar">
+            <input type="text" id="pbar2" style="position:absolute;left:218px;top:292px;width:10px;height:58px;line-height:58px;z-index:9;" name="Editbox3" value="" readonly="" class="pbar">
+            <input type="text" id="Editbox6" style="position:absolute;left:214px;top:365px;width:18px;height:19px;line-height:19px;z-index:10;" name="Editbox3" value="" readonly="" class="bulb">
+            <input type="text" id="Tbar3" style="position:absolute;left:285px;top:271px;width:20px;height:18px;line-height:18px;z-index:11;" name="Editbox3" value="5" class="My_TX">
+            <input type="text" id="Editbox8" style="position:absolute;left:291px;top:292px;width:10px;height:78px;line-height:78px;z-index:12;" name="Editbox3" value="" readonly="" class="bar">
+            <input type="text" id="pbar3" style="position:absolute;left:291px;top:292px;width:10px;height:58px;line-height:58px;z-index:13;" name="Editbox3" value="" readonly="" class="pbar">
+            <input type="text" id="Editbox10" style="position:absolute;left:287px;top:365px;width:18px;height:19px;line-height:19px;z-index:14;" name="Editbox3" value="" readonly="" class="bulb">
+            <input type="text" id="Tbar4" style="position:absolute;left:70px;top:273px;width:20px;height:18px;line-height:18px;z-index:15;" name="Editbox3" value="5" class="My_TX">
+            <input type="text" id="Editbox12" style="position:absolute;left:77px;top:294px;width:10px;height:78px;line-height:78px;z-index:16;" name="Editbox3" value="" readonly="" class="bar">
+            <input type="text" id="pbar4" style="position:absolute;left:76px;top:294px;width:10px;height:58px;line-height:58px;z-index:17;" name="Editbox3" value="" readonly="" class="pbar">
+            <input type="text" id="Editbox14" style="position:absolute;left:73px;top:367px;width:18px;height:19px;line-height:19px;z-index:18;" name="Editbox3" value="" readonly="" class="bulb">
+            <div id="wb_Text24" style="position:absolute;left:14px;top:686px;width:143px;height:16px;text-align:center;z-index:19;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Active Phone Number</strong></span></div>
+            <div id="wb_Text25" style="position:absolute;left:25px;top:629px;width:129px;height:16px;text-align:center;z-index:20;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Faram Manager</strong></span></div>
+            <div id="wb_Text12" style="position:absolute;left:455px;top:628px;width:129px;height:16px;text-align:center;z-index:21;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Name of Plantation</strong></span></div>
+            <input type="text" id="owner" style="position:absolute;left:193px;top:628px;width:146px;height:25px;line-height:25px;z-index:22;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <input type="text" id="lastcommand" style="position:absolute;left:193px;top:577px;width:146px;height:25px;line-height:25px;z-index:23;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <div id="wb_Text10" style="position:absolute;left:458px;top:690px;width:129px;height:16px;text-align:center;z-index:24;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>User</strong></span></div>
+            <div id="wb_Text11" style="position:absolute;left:13px;top:578px;width:180px;height:16px;text-align:center;z-index:25;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Last Recived SMS</strong></span></div>
+            <div id="wb_Text26" style="position:absolute;left:25px;top:731px;width:129px;height:16px;text-align:center;z-index:26;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Licence Code</strong></span></div>
+            <div id="wb_Text27" style="position:absolute;left:458px;top:742px;width:129px;height:16px;text-align:center;z-index:27;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Revision</strong></span></div>
+            <div id="wb_Text3" style="position:absolute;left:452px;top:577px;width:129px;height:16px;text-align:center;z-index:28;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Select Scenario</strong></span></div>
+            <input type="text" id="phone" style="position:absolute;left:193px;top:679px;width:146px;height:25px;line-height:25px;z-index:29;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <input type="text" id="licence" style="position:absolute;left:193px;top:731px;width:146px;height:25px;line-height:25px;z-index:30;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <div id="wb_Text2" style="position:absolute;left:262px;top:394px;width:88px;height:14px;text-align:center;z-index:31;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:12px;"><strong>Motor Temp</strong></span></div>
+            <div id="wb_Text15" style="position:absolute;left:184px;top:394px;width:78px;height:14px;text-align:center;z-index:32;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:12px;"><strong>Env. Temp</strong></span></div>
+            <div id="wb_Text14" style="position:absolute;left:93px;top:394px;width:103px;height:14px;text-align:center;z-index:33;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:12px;"><strong>Env. Humid</strong></span></div>
+            <input type="text" id="VA_1" style="position:absolute;left:39px;top:75px;width:67px;height:22px;line-height:22px;z-index:34;" name="Editbox3" value="0 (A)" readonly="" class="My_TX_Value">
+            <input type="text" id="VA_2" style="position:absolute;left:39px;top:97px;width:67px;height:22px;line-height:22px;z-index:35;" name="Editbox3" value="0 (A)" readonly="" class="My_TX_Value">
+            <input type="text" id="VA_3" style="position:absolute;left:39px;top:119px;width:67px;height:22px;line-height:22px;z-index:36;" name="Editbox3" value="0 (V)" readonly="" class="My_TX_Value">
+            <input type="text" id="VA_4" style="position:absolute;left:39px;top:141px;width:67px;height:22px;line-height:22px;z-index:37;" name="Editbox3" value="0 (V)" readonly="" class="My_TX_Value">
+            <input type="text" id="VA_5" style="position:absolute;left:39px;top:163px;width:67px;height:22px;line-height:22px;z-index:38;" name="Editbox3" value="0 (V)" readonly="" class="My_TX_Value">
+            <div id="wb_Text1" style="position:absolute;left:12px;top:393px;width:78px;height:14px;text-align:center;z-index:39;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:12px;"><strong>Soil Humid</strong></span></div>
+            <div id="wb_Text13" style="position:absolute;left:192px;top:26px;width:88px;height:16px;text-align:center;z-index:40;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Power</strong></span></div>
+            <input type="text" id="power" style="position:absolute;left:280px;top:25px;width:55px;height:18px;line-height:18px;z-index:41;" name="Editbox3" value="0%" class="My_TX">
+            <div id="wb_Text16" style="position:absolute;left:363px;top:26px;width:88px;height:32px;text-align:center;z-index:42;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Power Factor</strong></span></div>
+            <input type="text" id="powerfactor" style="position:absolute;left:464px;top:25px;width:55px;height:18px;line-height:18px;z-index:43;" name="Editbox3" value="0%" class="My_TX">
+            <div id="wb_Text17" style="position:absolute;left:538px;top:26px;width:88px;height:16px;z-index:44;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Efficiency</strong></span></div>
+            <input type="text" id="efficency" style="position:absolute;left:626px;top:25px;width:55px;height:18px;line-height:18px;z-index:45;" name="Editbox3" value="0 %" class="My_TX">
+            <div id="wb_Text20" style="position:absolute;left:357px;top:392px;width:94px;height:16px;text-align:center;z-index:46;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Motor Status</strong></span></div>
+            <div id="wb_Text22" style="position:absolute;left:480px;top:396px;width:127px;height:16px;text-align:center;z-index:47;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Pool level</strong></span></div>
+            <div id="wb_Text21" style="position:absolute;left:637px;top:392px;width:88px;height:16px;text-align:center;z-index:48;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Water level</strong></span></div>
+            <div id="wb_Text23" style="position:absolute;left:62px;top:443px;width:105px;height:16px;text-align:center;z-index:49;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Pool Manifold</strong></span></div>
+            <div id="wb_Shape1" style="position:absolute;left:482px;top:281px;width:102px;height:54px;z-index:50;">
+               <img src="images/img0001.png" id="Shape1" alt="" style="width:102px;height:54px;"></div>
+            <input type="text" id="Editbox18" style="position:absolute;left:498px;top:367px;width:70px;height:18px;line-height:18px;z-index:51;" name="Editbox3" value="12" class="My_TX">
+            <input type="text" id="station_name" style="position:absolute;left:601px;top:628px;width:146px;height:25px;line-height:25px;z-index:52;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <input type="text" id="account" style="position:absolute;left:601px;top:675px;width:146px;height:25px;line-height:25px;z-index:53;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <input type="text" id="sotware" style="position:absolute;left:604px;top:731px;width:146px;height:25px;line-height:25px;z-index:54;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <input type="button" id="2manifolds" onclick="set_relay(this.id);return false;" name="" value="Close" style="position:absolute;left:584px;top:477px;width:46px;height:45px;z-index:55;" class="relay">
+            <input type="button" id="1manu" onclick="set_relay(this.id);return false;" name="" value="Close" style="position:absolute;left:341px;top:477px;width:46px;height:45px;z-index:56;" class="relay">
+            <div id="wb_Text29" style="position:absolute;left:525px;top:445px;width:171px;height:16px;text-align:center;z-index:57;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Main Manifold</strong></span></div>
+            <div id="wb_Text28" style="position:absolute;left:283px;top:443px;width:169px;height:16px;text-align:center;z-index:58;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Auxilery Manifold</strong></span></div>
+            <div id="chartline" style="position:absolute;left:111px;top:53px;width:638px;height:132px;z-index:59">
+               <canvas id="mycanvas" width="580px" height="130px" style="left:450px;top:185px;"></canvas></div>
+            <input type="text" id="VA_0" style="position:absolute;left:39px;top:53px;width:67px;height:22px;line-height:22px;z-index:60;" name="Editbox3" value="0 (A)" readonly="" class="My_TX_Value">
+            <div id="wb_Text4" style="position:absolute;left:9px;top:78px;width:26px;height:19px;z-index:61;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:'Times New Roman';font-size:16px;"><strong>I u</strong></span></div>
+            <div id="wb_Text5" style="position:absolute;left:9px;top:104px;width:26px;height:17px;z-index:62;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:'Times New Roman';font-size:15px;"><strong>I w</strong></span></div>
+            <div id="wb_Text6" style="position:absolute;left:9px;top:53px;width:26px;height:17px;z-index:63;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:'Times New Roman';font-size:15px;"><strong>I v</strong></span></div>
+            <div id="wb_Text7" style="position:absolute;left:9px;top:170px;width:26px;height:34px;z-index:64;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:'Times New Roman';font-size:15px;"><strong>V w</strong></span></div>
+            <div id="wb_Text8" style="position:absolute;left:9px;top:148px;width:26px;height:17px;z-index:65;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:'Times New Roman';font-size:15px;"><strong>V v</strong></span></div>
+            <div id="wb_Text9" style="position:absolute;left:9px;top:126px;width:26px;height:17px;z-index:66;text-align:left;" class="myText">
+               <span style="color:#000000;font-family:'Times New Roman';font-size:15px;"><strong>V u</strong></span></div>
+            <div id="wb_Text18" style="position:absolute;left:11px;top:6px;width:245px;height:20px;text-align:center;z-index:67;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:15px;"><strong>Main Motor Information</strong><br></span></div>
+            <input type="range" id="speed" onchange="change_speed();return false;" style="position:absolute;left:562px;top:194px;width:103px;height:20px;line-height:20px;z-index:68;" name="Editbox25" value="" min="1" max="800" step="50">
+            <script>                  
+                  function  change_speed()
+                  {
+                  _millisPerPixel=parseInt(document.getElementById('speed').value);
+                  
+                  }
+                  
+            </script>
+            <div id="wb_Text30" style="position:absolute;left:436px;top:194px;width:127px;height:16px;text-align:center;z-index:69;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Time Span</strong></span></div>
+            <div id="wb_Image3" style="position:absolute;left:653px;top:230px;width:72px;height:105px;z-index:70;">
+               <img src="images/well.png" id="Image3" alt=""></div>
+            <input type="button" id="upate_status" onclick="request_status();return false;" name="" value="Farm Status" style="position:absolute;left:25px;top:536px;width:103px;height:27px;z-index:71;">
+            <input type="text" id="scenario" style="position:absolute;left:601px;top:577px;width:146px;height:25px;line-height:25px;z-index:72;" name="Editbox1" value="---" readonly="" class="My_TX">
+            <div id="wb_Image1" style="position:absolute;left:350px;top:239px;width:101px;height:90px;z-index:73;">
+               <img src="images/motor.png" id="Image1" alt=""></div>
+         </div>
+         <div id="wb_Text19" style="position:absolute;left:8px;top:240px;width:261px;height:18px;text-align:center;z-index:75;" class="myText">
+            <span style="color:#000000;font-family:Tahoma;font-size:15px;"><strong>Sensors &amp; Auxiliary Status</strong></span>
+         </div>
+         <div id="wb_Tezzzzxt31" style="position:absolute;left:289px;top:856px;width:188px;height:16px;text-align:center;z-index:76;">
+            <span style="color:#C0C0C0;font-family:Arial;font-size:13px;">www.Keyno-Gc.com</span>
+         </div></div>
+<!-- System -->
+      <div id="_system" style="position:absolute;left:120px;top:188px;width:122px;height:72px;z-index:9">
+         <div id="adv_layer" style="position:absolute;text-align:left;left:1px;top:1px;width:726px;height:458px;z-index:28;" class="My_layer">
+            <input type="reset" id="Buttonfsdsd" onclick="movebar('bar1',1);return false;" name="" value="+" style="position:absolute;left:588px;top:400px;width:24px;height:25px;z-index:0;" class="myButtom">
+            <input type="reset" id="Buttfffffon5" onclick="movebar('bar1',0);return false;" name="" value="-" style="position:absolute;left:612px;top:400px;width:24px;height:25px;z-index:1;" class="myButtom">
+            <input type="text" id="STS" style="position:absolute;left:329px;top:55px;width:150px;height:23px;line-height:23px;z-index:2;" name="Editbox1" value="plantation" class="My_TX">
+            <input type="button" id="Butzton4dfgh" onclick="Update_Wifi(STS);return false;" name="" value="Set" style="position:absolute;left:492px;top:56px;width:69px;height:26px;z-index:3;" class="myButtom">
+            <div id="wb_Text12" style="position:absolute;left:200px;top:60px;width:129px;height:16px;text-align:center;z-index:4;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Select Farm</strong></span></div>
+            <div id="wb_Text25" style="position:absolute;left:200px;top:96px;width:129px;height:16px;text-align:center;z-index:5;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Select Farmers</strong></span></div>
+            <input type="text" id="OWN" style="position:absolute;left:329px;top:95px;width:150px;height:23px;line-height:23px;z-index:6;" name="Editbox1" value="ggggg" class="My_TX">
+            <input type="button" id="Butxzxczxcton1" onclick="Update_Wifi(OWN);return false;" name="" value="Set" style="position:absolute;left:492px;top:97px;width:69px;height:26px;z-index:7;" class="myButtom">
+            <div id="wb_Text3" style="position:absolute;left:199px;top:170px;width:129px;height:16px;text-align:center;z-index:8;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Scenario</strong></span></div>
+            <select name="sena" size="1" id="set_sce" style="position:absolute;left:328px;top:169px;width:153px;height:27px;z-index:9;" class="My_TX">
+               <option value="1">Night Irrigation</option>
+               <option selected="" value="2">peak time conservation</option>
+               <option value="3">Manual Control</option>
+               <option value="4">Schedule base</option>
+               <option value="5">Schedule 1</option>
+               <option value="6">Schedule 2</option>
+            </select>
+            <div id="wb_Text24" style="position:absolute;left:199px;top:131px;width:130px;height:16px;text-align:center;z-index:10;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Active Phone</strong></span></div>
+            <input type="text" id="PHN" style="position:absolute;left:328px;top:130px;width:151px;height:23px;line-height:23px;z-index:11;" name="Editbox1" value="0912716..." class="My_TX">
+            <input type="button" id="Buttjfgvhon2" onclick="Update_Wifi(PHN);return false;" name="" value="Set" style="position:absolute;left:493px;top:130px;width:69px;height:26px;z-index:12;" class="myButtom">
+            <input type="button" id="Buttonczxvzx3" onclick="Set_scenario();return false;" name="" value="Set" style="position:absolute;left:493px;top:169px;width:69px;height:26px;z-index:13;" class="myButtom">
+            <input type="text" id="ts_0" style="position:absolute;left:107px;top:258px;width:49px;height:18px;line-height:18px;z-index:14;" name="Editbox1" value="7:30">
+            <input type="text" id="T2" style="position:absolute;left:136px;top:307px;width:99px;height:25px;line-height:25px;z-index:15;" name="Editbox1" value="">
+            <input type="text" id="ts_1" style="position:absolute;left:243px;top:258px;width:49px;height:18px;line-height:18px;z-index:16;" name="Editbox1" value="12:30">
+            <input type="text" id="T3" style="position:absolute;left:257px;top:307px;width:99px;height:25px;line-height:25px;z-index:17;" name="Editbox1" value="">
+            <input type="text" id="ts_2" style="position:absolute;left:345px;top:258px;width:49px;height:18px;line-height:18px;z-index:18;" name="Editbox1" value="17:30">
+            <input type="text" id="ts_3" style="position:absolute;left:444px;top:258px;width:49px;height:18px;line-height:18px;z-index:19;" name="Editbox1" value="21:00">
+            <input type="text" id="T4" style="position:absolute;left:378px;top:307px;width:99px;height:25px;line-height:25px;z-index:20;" name="Editbox1" value="">
+            <input type="text" id="ts_4" style="position:absolute;left:537px;top:258px;width:49px;height:18px;line-height:18px;z-index:21;" name="Editbox1" value="24:00">
+            <div id="wb_Telbxt4" style="position:absolute;left:84px;top:273px;width:528px;height:34px;z-index:22;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:15px;">-----------------------------------------------------------------------------------------------------<br>0:00&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 12:00&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 24:00</span></div>
+            <input type="text" id="T5" style="position:absolute;left:497px;top:307px;width:99px;height:25px;line-height:25px;z-index:23;" name="Editbox1" value="">
+            <input type="button" id="Button3dsfg" onclick="update_timespan();return false;" name="" value="Set Time Span" style="position:absolute;left:612px;top:309px;width:101px;height:25px;z-index:24;" class="My_BT">
+            <script>                  
+                  function update_timespan()
+                  {
+                   document.getElementById("T1").value="0:00 to "                                    +document.getElementById("ts_0").value;
+                   document.getElementById("T2").value=document.getElementById("ts_0").value + " to "+document.getElementById("ts_1").value;
+                   document.getElementById("T3").value=document.getElementById("ts_1").value + " to "+document.getElementById("ts_2").value;
+                   document.getElementById("T4").value=document.getElementById("ts_2").value + " to "+document.getElementById("ts_3").value;
+                   document.getElementById("T5").value=document.getElementById("ts_3").value + " to "+document.getElementById("ts_4").value;
+                  var com="";
+                  for(i=0;i<5;i++)
+                  {
+                   a=document.getElementById("ts_"+i.toString()).value.split(":");
+                   num=parseInt(a[0])*360+parseInt(a[1])*6;
+                  com=com+num.toString()+"@";
+                  
+                  }
+                  
+                   var command  = "STS=" + com;  
+                  //alert(command  )
+                     _Connection.send(command);
+                  change_color('Button3dsfg');
+                  }
+                  
+                  
+                  
+            </script>
+            <input type="text" id="T1" style="position:absolute;left:15px;top:307px;width:99px;height:25px;line-height:25px;z-index:25;" name="Editbox1" value="">
+            <div id="wb_Text1" style="position:absolute;left:237px;top:230px;width:268px;height:16px;text-align:center;z-index:26;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>Electrical motor Working Time Schedule </strong></span></div>
+            <div id="wb_Text18" style="position:absolute;left:274px;top:13px;width:235px;height:20px;text-align:center;z-index:27;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:15px;"><strong>Modify Irrigation Scenario </strong><br></span></div>
+         </div>
+         <div id="wb_Tezzzjjzxt31" style="position:absolute;left:275px;top:521px;width:188px;height:16px;text-align:center;z-index:29;">
+            <span style="color:#C0C0C0;font-family:Arial;font-size:13px;">www.Keyno-Gc.com</span>
+         </div></div>
+<!-- wifi -->
+      <div id="_wifi" style="position:absolute;left:111px;top:188px;width:122px;height:72px;z-index:10">
+         <div id="wifi_layer" style="position:absolute;text-align:left;left:0px;top:1px;width:761px;height:421px;z-index:41;" class="My_layer">
+            <input type="text" id="SHN" style="position:absolute;left:140px;top:73px;width:114px;height:23px;line-height:23px;z-index:0;" name="Editbox1" value="MyIOT" class="My_TX">
+            <input type="button" id="Button134" onclick="Update_Wifi(WFM);return false;" name="" value="Set" style="position:absolute;left:268px;top:35px;width:69px;height:26px;z-index:1;" class="myButtom">
+            <input type="button" id="Button4dfgh" onclick="Update_Wifi(SHN);return false;" name="" value="Set" style="position:absolute;left:268px;top:75px;width:69px;height:26px;z-index:2;" class="myButtom">
+            <div id="wb_Text3" style="position:absolute;left:356px;top:36px;width:85px;height:18px;z-index:3;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">User Name</span></div>
+            <input type="button" id="Button11hdf" onclick="Update_Wifi(APN);return false;" name="" value="Set" style="position:absolute;left:268px;top:115px;width:69px;height:26px;z-index:4;" class="myButtom">
+            <input type="text" id="APN" style="position:absolute;left:140px;top:114px;width:114px;height:20px;line-height:20px;z-index:5;" name="Editbox1" value="Smart Well" class="My_TX">
+            <div id="wb_Text4" style="position:absolute;left:363px;top:76px;width:78px;height:18px;z-index:6;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Password</span></div>
+            <input type="button" id="Button6" onclick="AddUser();return false;" name="" value="Add User" style="position:absolute;left:480px;top:147px;width:96px;height:25px;z-index:7;" class="myButtom">
+            <input type="button" id="Button7" onclick="RemoveUser();return false;" name="" value="Remove User" style="position:absolute;left:369px;top:147px;width:96px;height:25px;z-index:8;" class="myButtom">
+            <input type="button" id="Button8" onclick="show_user_list();return false;" name="" value="Get User List" style="position:absolute;left:584px;top:29px;width:96px;height:25px;z-index:9;" class="myButtom">
+            <input type="text" id="_ssid" style="position:absolute;left:140px;top:234px;width:114px;height:23px;line-height:23px;z-index:10;" name="Editbox1" value="" class="My_TX">
+            <div id="wb_Text7" style="position:absolute;left:13px;top:237px;width:53px;height:18px;z-index:11;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">SSID</span></div>
+            <input type="button" id="Bugdfgtton9" onclick="SetNetwork();return false;" name="" value="Set" style="position:absolute;left:268px;top:233px;width:69px;height:26px;z-index:12;" class="myButtom">
+            <input type="button" id="Button10" onclick="ScanNetwork();return false;" name="" value="Scan Network" style="position:absolute;left:397px;top:237px;width:96px;height:26px;z-index:13;" class="myButtom">
+            <input type="text" id="APP" style="position:absolute;left:140px;top:152px;width:114px;height:23px;line-height:23px;z-index:14;" name="Editbox1" value="****" class="My_TX">
+            <input type="button" id="Bufdtton12" onclick="Update_Wifi(APP);return false;" name="" value="Set" style="position:absolute;left:268px;top:155px;width:69px;height:26px;z-index:15;" class="myButtom">
+            <input type="button" id="Button5" onclick="Restart();return false;" name="" value="Restart" style="position:absolute;left:369px;top:196px;width:96px;height:25px;z-index:16;" class="myButtom">
+            <div id="wb_Text8" style="position:absolute;left:15px;top:280px;width:81px;height:18px;z-index:17;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Password</span></div>
+            <input type="text" id="_netpass" style="position:absolute;left:140px;top:273px;width:114px;height:23px;line-height:23px;z-index:18;" name="Editbox1" value="" class="My_TX">
+            <div id="wb_Text9" style="position:absolute;left:308px;top:280px;width:39px;height:18px;z-index:19;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Hide</span></div>
+            <input type="checkbox" id="_hidecheck" name="_hidecheck" value="on" style="position:absolute;left:268px;top:278px;z-index:20;" onchange="document.getElementById('_netpass').type = this.checked ? 'password' : 'text'">
+            <div id="wb_Text21" style="position:absolute;left:10px;top:31px;width:163px;height:18px;z-index:21;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Set Wifi Mode to</span></div>
+            <div id="wb_Text10" style="position:absolute;left:10px;top:118px;width:118px;height:18px;z-index:22;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Set AP Name</span></div>
+<!-- network scan -->
+            <div id="netScanResult" style="position:absolute;left:506px;top:237px;width:216px;height:166px;z-index:23">
+            </div>
+<!-- user list -->
+            <div id="userlist" style="position:absolute;left:576px;top:72px;width:124px;height:69px;z-index:24">
+            </div>
+            <input type="password" id="_password" style="position:absolute;left:441px;top:71px;width:116px;height:21px;line-height:21px;z-index:25;" name="Editbox1" value="" class="My_TX">
+            <div id="wb_Text5" style="position:absolute;left:369px;top:114px;width:44px;height:18px;z-index:26;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Type</span></div>
+            <select name="Combobox1" size="1" id="_userType" style="position:absolute;left:443px;top:111px;width:116px;height:25px;z-index:27;" class="My_TX">
+               <option selected="" value="Admin">Admin</option>
+               <option value="Limit">Limit</option>
+            </select>
+            <input type="text" id="_username" style="position:absolute;left:441px;top:34px;width:116px;height:21px;line-height:21px;z-index:28;" name="Editbox1" value="" class="My_TX">
+            <select name="Combobox1" size="1" id="WFM" style="position:absolute;left:141px;top:31px;width:115px;height:26px;z-index:29;" class="My_TX">
+               <option value="Access Point">Access Point</option>
+               <option selected="" value="Station">Station</option>
+            </select>
+            <div id="wb_Text1" style="position:absolute;left:10px;top:77px;width:118px;height:18px;z-index:30;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Set Host Name</span></div>
+            <div id="wb_Text2" style="position:absolute;left:13px;top:332px;width:151px;height:18px;z-index:31;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Set Server Sddress</span></div>
+            <input type="button" id="Set_Center" onclick="SetNetwork();return false;" name="" value="Set" style="position:absolute;left:15px;top:366px;width:69px;height:26px;z-index:32;" class="myButtom">
+            <input type="text" id="ADDRESS" style="position:absolute;left:96px;top:366px;width:395px;height:23px;line-height:23px;z-index:33;" name="Editbox1" value="http://data.keyno-gc.com" class="My_TX">
+            <input type="text" id="STI" onchange="CheckIP(this);return false;" style="position:absolute;left:140px;top:193px;width:114px;height:23px;line-height:23px;z-index:34;" name="Editbox1" value="192.168.---.---." class="My_TX">
+            <input type="button" id="Bstatic" onclick="Update_Wifi(STI);return false;" name="" value="Set" style="position:absolute;left:268px;top:195px;width:69px;height:26px;z-index:35;" class="My_BT">
+            <div id="wb_Texjdsfgt2" style="position:absolute;left:15px;top:200px;width:118px;height:18px;z-index:36;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Set Static IP</span></div>
+            <input type="checkbox" id="staticCheck" name="_hidecheck" value="on" style="position:absolute;left:343px;top:200px;z-index:37;" onchange="enable_static_IP(this.checked);return false;">
+            <script>                  
+                  function enable_static_IP(checked)
+                  {
+                  	if(checked) command  = "ESI="+"1";
+                  	else        command  = "ESI="+"0";
+                  
+                  	_Connection.send(command);
+                  }
+                  
+            </script>
+            <input type="button" id="RESTART" onclick="RestartHTML();return false;" name="" value="Restart" style="position:absolute;left:480px;top:197px;width:96px;height:24px;z-index:38;" class="My_BT"><script>                  
+                   function Restart()
+                  { 
+                     var command  = "RRE"; 
+                     _Connection.send(command);
+                  }
+                  
+            </script>
+            <div id="wb_Text11" style="position:absolute;left:9px;top:154px;width:138px;height:18px;z-index:39;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">Set AP Password</span></div>
+            <input type="button" id="savesetting" onclick=" save_setting();return false;" name="" value="Save Setting" style="position:absolute;left:594px;top:195px;width:106px;height:26px;z-index:40;" class="My_BT"><script>                  
+                   function save_setting()
+                  { 
+                     var command  = "SVE"; 
+                     _Connection.send(command);
+                  }
+                  
+            </script>
+         </div>
+         <div id="wb_Tezddzzzxt31" style="position:absolute;left:278px;top:483px;width:188px;height:16px;text-align:center;z-index:42;">
+            <span style="color:#C0C0C0;font-family:Arial;font-size:13px;">www.Keyno-Gc.com</span>
+         </div></div>
+<!-- about -->
+      <div id="_about" style="position:absolute;left:74px;top:188px;width:122px;height:72px;z-index:11">
+         <div id="about_layer" style="position:absolute;text-align:left;left:1px;top:1px;width:761px;height:423px;z-index:5;" class="My_layer">
+            <div id="wb_Text5" style="position:absolute;left:243px;top:261px;width:138px;height:16px;text-align:center;z-index:0;">
+               <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>KNX,Z-wavw</strong></span></div>
+            <div id="wb_Text1" style="position:absolute;left:14px;top:15px;width:735px;height:108px;text-align:right;z-index:1;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;"> امروزه فن آوری عصر اطلاعات یا همان شبکه&nbsp; گستره بین سرورها و کامپیوتر ها که تحت نام اینترنت گسترش یافته دیگر محدود&nbsp; به دادهای مجازی داخل رایانه ها نیست بلکه با نفوذ به اشیای اطراف ما ،&nbsp; انها را نیز به سیطره خود افزوده است. این فن آوری که به&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; یا اینترنت اشیاه معروف است با سرعت فزاینده ای در حال توسعه به تمام صنایع مختلف می باشد به طوری که هم اکنون تعداد وسیله ها و ماشین های متصل به اینترنت بیشتر از تعداد رایانه ها ، تبلت ها ، گوشی های هوشمند و لوازم اداری می باشد و این بدلیل قدرت توصعه پذیری این فن آوری همراه با ارایه روش های کاملا اقتصادی می باشد ، به طوری که پیش بینی می شود تا سال 2020 میزان سرمایه گزاری در این صنعت به بیش از 23 تریلیون دلار می رسد </span></div>
+            <div id="wb_Text2" style="position:absolute;left:14px;top:140px;width:735px;height:108px;text-align:right;z-index:2;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;">در این فن آوری&nbsp; هر یک از لوازم و ماشین ها تبدیل به یک وب سرور مستقل خواهد شد که در قالب پروتکل جهانی اینترنت&nbsp; قادر به ارایه سرویس مورد نیاز نظیر اعلام وضعیت ماشین و اجرای فرمان های کنترلی ماشین&nbsp; در محدوده یک شبکه محلی یا شبکه اینترنت خواهند بود . به عبارت دیگر هر شی می تواند توسط ماژول های این فن آوری هم به یک کامپیوتر کوچک تبدیل شود که قابلیت خواندن و پردازش اطلاعات سنسور ها است و هم از سوی دیگر قادر به نشر این اطلاعات بمانند یک وب سرور کوچک بر روی پروتکل اینترنت می باشد . به همان سادگی که می توان&nbsp; یک کامپیوتر یا تبلت را به یک شبکه متصل نمود می توان یه شی را به یک شبکه متصل نمود و از ان به مشابه یک سند اطلاعات تحت شبکه اینترنت&nbsp; با اینترانت استفاد نمود </span></div>
+            <div id="wb_Text3" style="position:absolute;left:14px;top:261px;width:735px;height:144px;text-align:right;z-index:3;">
+               <span style="color:#000000;font-family:Arial;font-size:16px;"> این فن آوری از یک جهت در مقایسه با پروتوکل های قدیمی خانه هوشمند نظیر&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; در برگیرنده تمام ظرفیت ها، همراه با نقاط قوت شبکه اینترنت می باشد و هیچ یک از محدودیت ها ی پروتکل های قدیمی نظیر عدم قابلیت توسعه و سفارشی نمودن فراینده ها را ندارد و از جهت دیگر بسیار از نظر اقتصادی مقرون به صرفه می باشد. در این فن آوری سطح کنترل و سطح حفاظت در همان سطح و توسعه شبکه جهانی اینترنت می باشد و تکنولوژی وایرلس این امکان را می دهد که بتوان این فن آوری را از&nbsp; یک پریز ساده تا یک ماشین پیچیده با همان امکانات اجرا نمود.<br>با این تکنولوژی داشتن خانه یا محله کار هوشمند یک رویای لوکس و گرانقیمت نیست بلکه یک نیاز مدرن با قابلیت اجرای ساده و کاملا اقتصادی می باشد . با این فن آوری می توان یک چرخه کامل از مدیریت جامع اطلات از، <u>جمع آوری داده</u>،&nbsp; <u>پردازش داده</u> و&nbsp; <u>نشر داده</u> جهت استفاده در یک سیستم کوچک مانند خانه هوشمند یا یک سیستم صنعتی بزرگ را به آسانی طراحی و ایجاد نمود</span></div>
+            <div id="wb_Text4" style="position:absolute;left:14px;top:33px;width:142px;height:16px;text-align:center;z-index:4;">
+               <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Internet Of Things</strong></span></div>
+         </div>
+         <div id="wb_Tezzgsdfzzxt31" style="position:absolute;left:280px;top:488px;width:188px;height:16px;text-align:center;z-index:6;">
+            <span style="color:#C0C0C0;font-family:Arial;font-size:13px;">www.Keyno-Gc.com</span>
+         </div></div>
+<!-- GSM -->
+      <div id="_GSM" style="position:absolute;left:53px;top:188px;width:122px;height:72px;z-index:12">
+         <div id="gsm" style="position:absolute;text-align:left;left:0px;top:0px;width:890px;height:474px;z-index:9;" class="My_layer">
+            <table style="position:absolute;left:20px;top:268px;width:854px;height:33px;z-index:0;" cellpadding="0" cellspacing="1" id="SMS_table">
+               <tr>
+                  <td class="cell0"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"> </span><span style="color:#000000;font-family:Tahoma;font-size:13px;line-height:16px;"><strong>Status </strong></span></td>
+                  <td class="cell1"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong>Command</strong></span></td>
+                  <td class="cell2"><span style="color:#000000;font-family:Tahoma;font-size:13px;line-height:16px;"><strong>Date</strong></span></td>
+                  <td class="cell3"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong>Sender</strong></span></td>
+                  <td class="cell4"><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><strong>Select</strong></span></td>
+               </tr>
+            </table>
+            <input type="button" id="Buttohdfgn1" onclick="list_sms();return false;" name="" value="Select" style="position:absolute;left:756px;top:234px;width:118px;height:25px;z-index:1;">
+            <script>                  
+                  function list_sms()
+                  {
+                   _Connection.send("LSM");
+                  }
+                  
+            </script>
+            <input type="button" id="Bukjkltton1" onclick="remove_all_sms();return false;" name="" value="Delete All" style="position:absolute;left:150px;top:234px;width:114px;height:25px;z-index:2;">
+            <script>                  
+                  function list_sms()
+                  {
+                   _Connection.send("LSM");
+                  }
+                  
+            </script>
+            <input type="button" id="Buhdghtton1" onclick="remove_sms();return false;" name="" value="Delete Last SMS" style="position:absolute;left:20px;top:234px;width:119px;height:25px;z-index:3;">
+            <script>                  
+                  function list_sms()
+                  {
+                   _Connection.send("LSM");
+                  }
+                  
+            </script>
+            <input type="button" id="Bclear" onclick="clear_TA();return false;" name="" value="Clear" style="position:absolute;left:188px;top:7px;width:76px;height:29px;z-index:4;">
+            <script>                  
+                  function clear_TA()
+                  {
+                  document.getElementById('sim_tb').value= ""
+                  }
+                  
+            </script>
+            <textarea name="TextArea1" id="sim_tb" style="position:absolute;left:188px;top:47px;width:566px;height:145px;z-index:5;" rows="8" cols="91"></textarea>
+            <input type="button" id="sendcom" onclick=" send_command();return false;" name="" value="Send" style="position:absolute;left:660px;top:7px;width:96px;height:30px;z-index:6;">
+            <script>                  
+                  function send_command()
+                  {
+                   var e = document.getElementById("commman");
+                  
+                    var command  = "SIM=" + e.options[e.selectedIndex].value;
+                     _Connection.send(command);
+                  
+                  }
+                  
+                  
+            </script>
+            <select name="Combobox1" size="1" id="commman" style="position:absolute;left:295px;top:7px;width:349px;height:29px;z-index:7;" class="My_TX">
+               <option value="AT">AT</option>
+               <option value="AT+HTTPINIT">AT+HTTPINIT Initialize HTTP Service</option>
+               <option value="AT+HTTPTERM">AT+HTTPTERM Terminate HTTP Service</option>
+               <option value="AT+CMGF=1">AT+CMGF=1 set sms format to text</option>
+               <option value="AT+CMGDA=" DEL="" ALL""="">AT+CMGDA="DEL ALL"  Delete all SMS</option>
+               <option value="AT+CMGDA=" DEL="" READ""="">AT+CMGDA="DEL READ" Delete all read messages</option>
+               <option value="AT+CMGDA=" DEL="" UNREAD""="">AT+CMGDA="DEL UNREAD" Delete all unread messages</option>
+               <option value="AT+CMGDA=" DEL="" SENT""="">AT+CMGDA="DEL SENT" Delete all sent SMS</option>
+               <option value="AT+CMGDA=" DEL="" UNSENT""="">AT+CMGDA="DEL UNSENT" Delete all unsent SMS</option>
+               <option value="AT+CMGDA=" DEL="" INBOX""="">AT+CMGDA="DEL INBOX" Delete all received SMS</option>
+               <option value="AT+CMGL=" REC="" UNREAD""="">AT+CMGL="REC UNREAD"  List Received unread messages</option>
+               <option value="AT+CMGL=" REC="" READ""="">AT+CMGL="REC READ" List Received read messages</option>
+               <option value="AT+CMGL=" ALL""="">AT+CMGL="ALL" List All messages</option>
+               <option value="AT+SAPBR=3,1," Contype","GPRS""="">AT+SAPBR=3,1,"Contype","GPRS"  Set  bearer profile</option>
+               <option value="AT+SAPBR=3,1," APN",""="" "="">AT+SAPBR=3,1,"APN",""  Set bearer param</option>
+               <option value="AT+SAPBR =0,1">AT+SAPBR =0,1  Close bearer</option>
+               <option value="AT+SAPBR =1,1">AT+SAPBR =1,1 Open bearer</option>
+               <option value="AT+SAPBR=2,1">AT+SAPBR=2,1 Query bearer</option>
+               <option value="AT+SAPBR =4,1">AT+SAPBR =4,1 Get bearer parameters</option>
+               <option value="AT+CREG?">AT+CREG? Check the registration status</option>
+               <option value="AT+CGACT?">AT+CGACT? Check attach status</option>
+               <option value="AT+CGATT=0">AT+CGATT=0 Detach from the GPRS network</option>
+               <option value="AT+CGATT=1">AT+CGATT=1 Attach to the network</option>
+               <option value="AT+CIICR ">AT+CIICR Bring up the wireless connection</option>
+               <option value="AT+CIFSR">AT+CIFSR Get the local IP address</option>
+            </select>
+            <div id="wb_Texvfvfvt3" style="position:absolute;left:745px;top:203px;width:129px;height:16px;text-align:center;z-index:8;" class="myText">
+               <span style="color:#000000;font-family:Tahoma;font-size:13px;"><strong>SMS Commands</strong></span></div>
+         </div>
+         <div id="wb_Tezzgfzzxt31" style="position:absolute;left:334px;top:524px;width:188px;height:16px;text-align:center;z-index:10;">
+            <span style="color:#C0C0C0;font-family:Arial;font-size:13px;">www.Keyno-Gc.com</span>
+         </div></div>
+   </div>
+   <div id="banner" style="position:absolute;text-align:center;left:0px;top:27px;width:110%;height:154px;z-index:13;">
+      <div id="banner_Container" style="width:881px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<!-- flag -->
+         <div id="MyFlag" style="position:absolute;left:35px;top:58px;width:98px;height:55px;z-index:0">
+            <canvas id="flag"></canvas></div>
+         <div id="wb_CssMenu4" style="position:absolute;left:133px;top:120px;width:642px;height:30px;z-index:1;">
+            <ul>
+               <li class="firstmain"><a href="javascript:show_tab('_status');" target="_self" title="HOME">Home</a>
+               </li>
+               <li><a href="javascript:show_tab('_system');" target="_self" title="Station Setting">Station&nbsp;Setting</a>
+               </li>
+               <li><a href="javascript:show_tab('_GSM');" target="_self" title="GSM Setting">GSM&nbsp;Setting</a>
+               </li>
+               <li><a href="javascript:show_tab('_wifi');" target="_self" title="Wifi Setting">Wifi&nbsp;Setting</a>
+               </li>
+               <li><a href="javascript:show_tab('_about');" target="_self" title="About Us">About&nbsp;Us</a>
+               </li>
+            </ul>
+            <br>
+         </div>
+         <div id="wb_Tdsext3" style="position:absolute;left:218px;top:34px;width:391px;height:37px;text-align:center;z-index:2;">
+            <span style="color:#00008B;font-family:Arial;font-size:32px;"><strong>Smart Plantation</strong></span></div>
+         <input type="text" id="current_data" style="position:absolute;left:186px;top:10px;width:469px;height:27px;line-height:27px;z-index:3;" name="Editbox1" value="************" readonly="">
+<!-- flag -->
+         <div id="Html1" style="position:absolute;left:746px;top:71px;width:69px;height:55px;z-index:4">
+            <canvas id="flag2"></canvas></div>
+         <div id="wb_SAT" style="position:absolute;left:815px;top:30px;width:52px;height:50px;z-index:5;">
+            <img src="images/1.png" id="SAT" alt=""></div>
+         <input type="button" id="_link" onclick="Request_IP();return false;" name="" value="" style="position:absolute;left:157px;top:52px;width:39px;height:38px;z-index:6;">
+      </div>
+   </div>
+   <div id="footer" style="position:fixed;text-align:left;left:0;right:0;bottom:0;height:57px;z-index:14;">
+      <div id="wb_Text11" style="position:absolute;left:15%;top:36%;width:67%;height:28%;text-align:center;z-index:7;">
+         <span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:11px;">Copyright © 2013 by Keyno Guidance &amp; Control&nbsp; ·&nbsp; All Rights reserved&nbsp; ·&nbsp; E-Mail: Q@keyno-gc.com</span></div>
+   </div>
+</body>
+</html>
