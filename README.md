@@ -29,6 +29,12 @@ following are the image of the designed PCB
 
 Two MCUs were used in this design, one ESP8266 as pilot controland data link  for local webserver and one STM32F103C8 forcontrolling the plantation, these MCUs communicate together via I2C protocol inmaster-slave modeESP8266 can restart the STM32F103C8 and adjust the setting byIOT webserver portal, the following image showing the different pages which designedfor different parts of the controller  
 
-<img src="/resource/home.png" width="550" height="400">
+
 ![Image](https://github.com/mkeyno/Smart_plantation/blob/master/resource/home.png) 
-![Image](https://github.com/mkeyno/Smart_plantation/blob/master/front.png) 
+
+![Image](https://github.com/mkeyno/Smart_plantation/blob/master/resource/farm.png)
+
+![Image](https://github.com/mkeyno/Smart_plantation/blob/master/resource/GSM.png)
+
+![Image](https://github.com/mkeyno/Smart_plantation/blob/master/resource/wifi.png)
+
